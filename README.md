@@ -18,7 +18,7 @@ Please see https://www.tensorflow.org/install/install_linux for how to install T
 
         samtools mpileup -B -d 100 -f /path/to/ref.fasta [-l] [-r] -q 10 -O -s -a /path/to/tumor.bam /path/to/normal.bam > /path/to/mixed_pileup_file
 
-Note: For the case of applying Deepssv on a part of the whole genome, specify the genomic region via the option -l or -r, and increase the BED entry by 110 base pairs in each direction.
+   Note: For the case of applying Deepssv on a part of the whole genome, specify the genomic region via the option -l or -r, and increase the BED entry by 110 base pairs in each direction.
 
 2. Run identi_candi_sites.py to identify candidate somatic small variants from the mixed pileup file:
 
