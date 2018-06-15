@@ -2,7 +2,9 @@
 
 Please help us improve Deepssv, by reporting bugs or any ideas on how to make things better. You can submit an issue or send us an email.
 
-Jing Meng    jing.mengrabbit@gmail.com
+Jing Meng        
+
+jing.mengrabbit@gmail.com
 
 Deepssv was tested on ubuntu 16.04 LTS and requires Python 3.5.2.
 
