@@ -15,32 +15,35 @@ Please see https://www.tensorflow.org/install/install_linux for how to install T
 Getting started
 
 1. Run samtools (tested version: 1.8) to convert tumor and normal BAM files to a mixed pileup file required by Deepssv:
-
-    samtools mpileup -B -d 100 -f /path/to/ref.fasta [-l] [-r] -q 10 -O -s -a /path/to/tumor.bam /path/to/normal.bam > /path/to/mixed_pileup_file
+'''
+samtools mpileup -B -d 100 -f /path/to/ref.fasta [-l] [-r] -q 10 -O -s -a /path/to/tumor.bam /path/to/normal.bam > /path/to/mixed_pileup_file
+'''
 
 Note: For the case of applying Deepssv on a part of the whole genome, specify the genomic region via the option -l or -r, and increase the BED entry by 110 base pairs in each direction.
 
 2. Run identi_candi_sites.py to identify candidate somatic small variants from the mixed pileup file:
+'''
+identi_candi_sites.py
+--Tumor_Normal_mpileup /path/to/mixed_pileup_file
+--Candidate_somatic_sites /path/to/candidate_sites
+'''
 
-    identi_candi_sites.py
-    --Tumor_Normal_mpileup /path/to/mixed_pileup_file
-    --Candidate_somatic_sites /path/to/candidate_sites
-    
 3. Run mapping_infor_candi_sites.py to create a file with mapping information for candidate somatic small variant sites and their neighbours as input for trained CNN model:
-    
-    mapping_infor_candi_sites.py
-    --Tumor_Normal_mpileup /path/to/mixed_pileup_file
-    --Candidate_somatic_sites /path/to/candidate_sites
-    --Mapping_information_file /path/to/mapping_infor_file
-    
-4. Run model_infer.py to predict somatic small variants:
+'''  
+mapping_infor_candi_sites.py
+--Tumor_Normal_mpileup /path/to/mixed_pileup_file
+--Candidate_somatic_sites /path/to/candidate_sites
+--Mapping_information_file /path/to/mapping_infor_file
+'''
 
-    model_infer.py
-    --checkpoint_file /path/to/trained_CNN_model
-    --Mapping_information_file_inference /path/to/mapping_infor_file
-    --Candidate_somatic_sites /path/to/candidate_sites
-    --vcf_file /path/to/vcf_file
-    
+4. Run model_infer.py to predict somatic small variants:
+'''
+model_infer.py
+--checkpoint_file /path/to/trained_CNN_model
+--Mapping_information_file_inference /path/to/mapping_infor_file
+--Candidate_somatic_sites /path/to/candidate_sites
+--vcf_file /path/to/vcf_file
+'''    
    
 Please help us improve Deepssv, by reporting bugs or any ideas on how to make things better. You can submit an issue or send me an email.
 
