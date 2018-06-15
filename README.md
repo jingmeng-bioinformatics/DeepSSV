@@ -24,11 +24,11 @@ Note: For the case of applying Deepssv on a part of the whole genome, specify th
 
 2. Run identi_candi_sites.py to identify candidate somatic small variants from the mixed pileup file:
 
-'''
-    identi_candi_sites.py
---Tumor_Normal_mpileup /path/to/mixed_pileup_file
---Candidate_somatic_sites /path/to/candidate_sites
-'''
+        '''
+            identi_candi_sites.py
+            --Tumor_Normal_mpileup /path/to/mixed_pileup_file
+            --Candidate_somatic_sites /path/to/candidate_sites
+         '''
 
 3. Run mapping_infor_candi_sites.py to create a file with mapping information for candidate somatic small variant sites and their neighbours as input for trained CNN model:
 
