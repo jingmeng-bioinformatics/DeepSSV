@@ -7,6 +7,7 @@ Deepssv was tested on ubuntu 16.04 LTS and requires Python 3.5.2.
 Prerequisites:
 
 TensorFlow 1.8.0
+
 Please see https://www.tensorflow.org/install/install_linux for how to install TensorFlow.
 
 
