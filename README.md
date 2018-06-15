@@ -32,7 +32,7 @@ identi_candi_sites.py
 
 3. Run mapping_infor_candi_sites.py to create a file with mapping information for candidate somatic small variant sites and their neighbours as input for trained CNN model:
 
-'''  
+''' 
 mapping_infor_candi_sites.py
 --Tumor_Normal_mpileup /path/to/mixed_pileup_file
 --Candidate_somatic_sites /path/to/candidate_sites
@@ -47,7 +47,7 @@ model_infer.py
 --Mapping_information_file_inference /path/to/mapping_infor_file
 --Candidate_somatic_sites /path/to/candidate_sites
 --vcf_file /path/to/vcf_file
-'''    
+'''   
    
 Please help us improve Deepssv, by reporting bugs or any ideas on how to make things better. You can submit an issue or send me an email.
 
