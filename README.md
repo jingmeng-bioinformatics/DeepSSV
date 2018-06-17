@@ -41,7 +41,7 @@ Please see https://www.tensorflow.org/install/install_linux for how to install T
         --vcf_file /path/to/vcf_file
         --Candidate_somatic_sites /path/to/candidate_sites
         
-#### Fine-tuning the CNN model
+## Fine-tuning the CNN model
 To fine-tune the CNN model, run the first step with the BED file of validated somatic small variant sites, 
   
    
