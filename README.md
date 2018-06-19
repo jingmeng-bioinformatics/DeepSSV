@@ -52,7 +52,7 @@ Please see https://www.tensorflow.org/install/install_linux for how to install T
 
         model_infer.py
         --checkpoint_file /path/to/trained_CNN_model
-        --Mapping_information_file_inference /path/to/mapping_infor_file
+        --Mapping_information_file_inference /path/to/mapping_infor_file_infer
         --vcf_file /path/to/vcf_file
         --Candidate_somatic_sites /path/to/candidate_sites
         
