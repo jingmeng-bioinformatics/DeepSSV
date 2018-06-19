@@ -37,6 +37,17 @@ Please see https://www.tensorflow.org/install/install_linux for how to install T
         
 4. Run model_train.py or model_fine_tune.py to train or fine-tune a CNN model.
 
+        model_train.py
+        --Mapping_information_file_train /path/to/mapping_infor_file_training
+        --Mapping_information_file_validate /path/to/mapping_infor_file_validation
+        --saved_model_path /path/to/save/trained_models
+        
+        model_fine_tune.py
+        --checkpoint_file /path/to/trained_models
+        --Mapping_information_file_fine_tune /path/to/mapping_infor_file_fine-tuning
+        --Mapping_information_file_validate /path/to/mapping_infor_file_validation
+        --saved_model_path /path/to/save/fine-tuned_models
+
 5. Run model_infer.py to predict somatic small variants:
 
         model_infer.py
@@ -45,10 +56,7 @@ Please see https://www.tensorflow.org/install/install_linux for how to install T
         --vcf_file /path/to/vcf_file
         --Candidate_somatic_sites /path/to/candidate_sites
         
-## Fine-tuning the CNN model
-To fine-tune the CNN model, run the first step with the BED file of validated somatic small variant sites, 
-  
-   
+        
 Please help us improve Deepssv, by reporting bugs or any ideas on how to make things better. You can submit an issue or send me an email.
 
 Jing Meng        
