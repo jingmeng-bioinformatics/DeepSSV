@@ -238,7 +238,7 @@ def append_mapping_infor(lines, index_list, strand_all_list, state_all_list, fie
             mq = mapping[11][i]
             prob = 10**((33 - ord(mq))/10)
             lines.append(str(prob))  # mapping quality
-            dis = int(mapping[12].split(',')[i])/args.length
+            dis = int(mapping[12].split(',')[i])/int(args.length)
             lines.append(str(dis))                 # distance to the read end
         
         # encoding base, mapping quality and distance to the read end in tumor
@@ -249,7 +249,7 @@ def append_mapping_infor(lines, index_list, strand_all_list, state_all_list, fie
             mq = mapping[6][i]
             prob = 10**((33 - ord(mq))/10)
             lines.append(str(prob))  # mapping quality
-            dis = int(mapping[7].split(',')[i])/args.length
+            dis = int(mapping[7].split(',')[i])/int(args.length)
             lines.append(str(dis))                 # distance to the read end 
     return lines # mapping information in one genomic site or column
 
