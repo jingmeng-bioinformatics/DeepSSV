@@ -57,7 +57,7 @@ Please see https://www.tensorflow.org/install/install_linux for how to install T
         --Candidate_somatic_sites /path/to/candidate_sites
         
         
-Please help us improve Deepssv by reporting bugs or any idea on how to make things better. You can submit an issue or send me an email.
+Please help us improve Deepssv by reporting bugs or ideas on how to make things better. You can submit an issue or send me an email.
 
 Jing Meng        
 
