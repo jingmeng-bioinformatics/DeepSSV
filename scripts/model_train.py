@@ -103,8 +103,8 @@ def model_function(data_batch, label_batch, args):
     return accuracy, loss, train_op
 
 def main(args):
-    train_dataset = dataset_input_fn(['args.Mapping_information_file_train'])
-    validate_dataset = dataset_input_fn(['args.Mapping_information_file_validate'])
+    train_dataset = dataset_input_fn([args.Mapping_information_file_train])
+    validate_dataset = dataset_input_fn([args.Mapping_information_file_validate])
 
     # create general iterator by the from_structure() method which needs the information of output data size/shape
     iterator = tf.data.Iterator.from_structure(train_dataset.output_types)
