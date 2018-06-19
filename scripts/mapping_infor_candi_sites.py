@@ -201,7 +201,7 @@ def locate(source, pattern = ['\+[0-9]+', '\-[0-9]+']):
                             strand_all.append('10') # reverse strand
 
     # restrict the depth to be equal to or less than 100
-    if len(index_all) =< 100:
+    if len(index_all) <= 100:
         pass
     else:
         index_all = index_all[:100]
