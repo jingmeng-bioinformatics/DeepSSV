@@ -26,14 +26,18 @@ Please see https://www.tensorflow.org/install/install_linux for how to install T
         --Tumor_Normal_mpileup /path/to/mixed_pileup_file
         --Candidate_somatic_sites /path/to/candidate_sites
 
-3. Run mapping_infor_candi_sites.py to create a file with mapping information for candidate somatic small variant sites and their neighbours as input for trained CNN model:
+3. Run mapping_infor_candi_sites.py to create a file with mapping information for candidate somatic small variant sites as input for trained CNN model, or to create a file with mapping information for validated somatic sites for training or fine-tuning the CNN model:
 
         mapping_infor_candi_sites.py
         --Candidate_validated_somatic_sites /path/to/candidate_validated_sites
         --Tumor_Normal_mpileup /path/to/mixed_pileup_file
         --Mapping_information_file /path/to/mapping_infor_file
+        --indicator training or inference
+        --length read length
+        
+4. Run model_train.py or model_fine_tune.py to train or fine-tune a CNN model.
 
-4. Run model_infer.py to predict somatic small variants:
+5. Run model_infer.py to predict somatic small variants:
 
         model_infer.py
         --checkpoint_file /path/to/trained_CNN_model
