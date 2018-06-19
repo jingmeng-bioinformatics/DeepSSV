@@ -6,7 +6,7 @@ import time
 
 parser = argparse.ArgumentParser()
 
-parser.add_argument('--checkpoint_file', required=True, metavar='checkpoint_file', help='the full path to the checkpoint file for the pre-trained model')
+parser.add_argument('--checkpoint_file', required=True, metavar='.data file', help='the full path to the checkpoint (.data) file for the pre-trained model')
 parser.add_argument('--Mapping_information_file_fine_tune', required=True, metavar='file', help='file for fine-tuning with mapping information for validated somatic small variant sites')
 parser.add_argument('--Mapping_information_file_validate', required=True, metavar='file', help='file for validation with mapping information for validated somatic small variant sites')
 parser.add_argument('--batch_size', default=128, metavar='integer', help='total number of training examples in a single batch')
@@ -105,8 +105,8 @@ def model_function(data_batch, label_batch, args):
     
 def main(args):
     # create the network manually as the restored model
-    fine_tune_dataset = dataset_input_fn(['args.Mapping_information_file_fine_tune'])
-    validate_dataset = dataset_input_fn(['args.Mapping_information_file_validate'])
+    fine_tune_dataset = dataset_input_fn([args.Mapping_information_file_fine_tune])
+    validate_dataset = dataset_input_fn([args.Mapping_information_file_validate])
     
     # create general iterator by the from_structure() method which needs the information of output data size/shape
     iterator = tf.data.Iterator.from_structure(fine_tune_dataset.output_types)
@@ -122,7 +122,7 @@ def main(args):
   
     with tf.Session(config = tf.ConfigProto(log_device_placement = True)) as sess:
         # restore the values of the parameters in the pre-trained model
-        saver.restore(sess, 'args.checkpoint_file')
+        saver.restore(sess, args.checkpoint_file)
 
         for i in range(args.num_epochs):
             start_time = time.time()
