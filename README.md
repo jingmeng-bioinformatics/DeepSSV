@@ -35,7 +35,7 @@ Please see https://www.tensorflow.org/install/install_linux for how to install T
         --indicator training or inference
         --length read length
         
-4. Run model_train.py or model_fine_tune.py to train or fine-tune a CNN model.
+4. Run model_train.py or model_fine_tune.py to train or fine-tune a CNN model:
 
         model_train.py
         --Mapping_information_file_train /path/to/mapping_infor_file_training
