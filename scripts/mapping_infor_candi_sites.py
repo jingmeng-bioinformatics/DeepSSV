@@ -367,7 +367,7 @@ def main(args):
                 # the distance smaller than the window size of 2*n
                 else:
                     # copy the information of overlapping window from last column
-                    for infor in overlap[gap:-1]:
+                    for infor in overlap[gap:]:
                         holder.append(infor)
                     overlap = []
                     for col in itertools.islice(enume_TN, 0, gap):
