@@ -11,6 +11,7 @@ parser.add_argument('--checkpoint_file', required=True, metavar='.data file', he
 parser.add_argument('--Mapping_information_file_inference', required=True, metavar='file', help='a file for inference with mapping information for candidate somatic small variant sites')
 parser.add_argument('--vcf_file', required=True, metavar='file', help='vcf file')
 parser.add_argument('--batch_size', default=128, metavar='integer', help='total number of inference examples in a single batch')
+parser.add_argument('--num_neurons_fc1', default=256, metavar='integer', help='the number of neurons in the first fully connected layer')
 parser.add_argument('--Candidate_somatic_sites', required=True, metavar='file', help='candidate somatic sites')
 
 args = parser.parse_args()
