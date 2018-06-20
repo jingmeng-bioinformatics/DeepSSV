@@ -7,7 +7,7 @@ import time
 parser = argparse.ArgumentParser()
 
 
-parser.add_argument('--checkpoint_file', required=True, metavar='checkpoint_file', help='the full path to the checkpoint file for the trained or fine-tuned model')
+parser.add_argument('--checkpoint_file', required=True, metavar='.data file', help='the full path to the checkpoint (.data) file for the trained or fine-tuned model')
 parser.add_argument('--Mapping_information_file_inference', required=True, metavar='file', help='a file for inference with mapping information for candidate somatic small variant sites')
 parser.add_argument('--vcf_file', required=True, metavar='file', help='vcf file')
 parser.add_argument('--batch_size', default=128, metavar='integer', help='total number of inference examples in a single batch')
@@ -104,7 +104,7 @@ def main(args):
 
     with tf.Session(config = tf.ConfigProto(log_device_placement = True)) as sess:
         # restore the values of the parameters in the trained model
-        saver.restore(sess, 'args.checkpoint_file')
+        saver.restore(sess, args.checkpoint_file)
 
         # set up the inference run
         start_time = time.time()
