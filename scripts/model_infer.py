@@ -6,7 +6,6 @@ import time
 
 parser = argparse.ArgumentParser()
 
-
 parser.add_argument('--checkpoint_file', required=True, metavar='.data file', help='the full path to the checkpoint (.data) file for the trained or fine-tuned model')
 parser.add_argument('--Mapping_information_file_inference', required=True, metavar='file', help='a file for inference with mapping information for candidate somatic small variant sites')
 parser.add_argument('--vcf_file', required=True, metavar='file', help='vcf file')
