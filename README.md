@@ -13,6 +13,8 @@ Please see https://www.tensorflow.org/install/install_linux for how to install T
 
 pandas
 
+xphyle
+
 ## Getting started
 
 1. Run samtools (tested version: 1.8) to convert tumor and normal BAM files to a mixed pileup file required by Deepssv:
