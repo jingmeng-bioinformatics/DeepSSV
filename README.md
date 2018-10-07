@@ -57,6 +57,7 @@ xphyle
         --checkpoint_file /path/to/trained_CNN_model
         --Mapping_information_file_inference /path/to/mapping_infor_file_infer
         --vcf_file /path/to/vcf_file
+        --pred_class /path/to/pred_class
         --Candidate_somatic_sites /path/to/candidate_sites
         
 6. Create the validated_sites file required by mapping_infor_candi_sites.py to generate a file with mapping information for training or fine-tuning the CNN model:
