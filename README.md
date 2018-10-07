@@ -59,13 +59,13 @@ xphyle
         --vcf_file /path/to/vcf_file
         --Candidate_somatic_sites /path/to/candidate_sites
         
-6. Create the Validated_somatic_sites file required by mapping_infor_candi_sites.py to generate a file with mapping information for training or fine-tuning the CNN model:
+6. Create the validated_sites file required by mapping_infor_candi_sites.py to generate a file with mapping information for training or fine-tuning the CNN model:
         
         validated_sites.py
         --Tumor_Normal_mpileup /path/to/mixed_pileup_file
         --mpileup_index /path/to/mpileup_index
         --Validated_labels /path/to/Validated_labels
-        --Validated_somatic_sites /path/to/Validated_somatic_sites
+        --Validated_somatic_sites /path/to/validated_sites
         
    Example of the Validated_labels file for validated sites with labels (1: somatic site, 0: non-somatic site):
    
