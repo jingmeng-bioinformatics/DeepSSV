@@ -19,7 +19,7 @@ xphyle
 
 1. Run samtools (tested version: 1.8) to convert tumor and normal BAM files to a mixed pileup file required by Deepssv:
 
-        samtools mpileup -B -d 100 -f /path/to/ref.fasta [-l] [-r] -q 10 -O -s -a /path/to/tumor.bam /path/to/normal.bam > /path/to/mixed_pileup_file
+        samtools mpileup -B -d 100 -f /path/to/ref.fasta [-l] [-r] -q 10 -O -s -a /path/to/tumor.bam /path/to/normal.bam | bgzip > /path/to/mixed_pileup_file
 
    Note: For the case of applying Deepssv on a part of the whole genome, increase the BED entry by 110 base pairs in each direction, and specify the genomic region via the option -l or -r.
 
@@ -59,7 +59,21 @@ xphyle
         --vcf_file /path/to/vcf_file
         --Candidate_somatic_sites /path/to/candidate_sites
         
+6. Create the Validated_somatic_sites file required by mapping_infor_candi_sites.py to generate a file with mapping information for training or fine-tuning the CNN model:
         
+        validated_sites.py
+        --Tumor_Normal_mpileup /path/to/mixed_pileup_file
+        --mpileup_index /path/to/mpileup_index
+        --Validated_labels /path/to/Validated_labels
+        --Validated_somatic_sites /path/to/Validated_somatic_sites
+        
+   Example of the Validated_labels file for validated sites with labels (1: somatic site, 0: non-somatic site):
+   
+        chr1    790265  0
+        chr1    1595272 1
+        chr1    2312314 1
+        chr1    5006153 0   
+             
 Please help us improve Deepssv by reporting bugs or ideas on how to make things better. You can submit an issue or send me an email.
 
 Jing Meng        
