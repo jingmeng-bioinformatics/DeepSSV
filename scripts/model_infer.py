@@ -129,6 +129,9 @@ with open(args.Candidate_somatic_sites, 'rt') as Cs, open(args.pred_class, 'rt')
         enume_Cs = enumerate(Cs)
         enume_pc = enumerate(pc)
         
+        # the threshold used to decide if a candiate site is a somatic site
+        threshold = 0.5
+        
         # write meta-information lines
         vcf.write(str('##fileformat=VCFv4.2') + '\n')
         vcf.write(str('##phasing=none') + '\n')
