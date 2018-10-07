@@ -13,7 +13,7 @@ parser.add_argument('--batch_size', default=128, metavar='integer', help='total 
 parser.add_argument('--buffer_size', default=600, metavar='integer', help='the maximum number of elements that will be buffered when prefetching')
 parser.add_argument('--num_epochs', default=100, metavar='integer', help='the number of times the model sees the entire dataset')
 parser.add_argument('--num_neurons_fc1', default=256, metavar='integer', help='the number of neurons in the first fully connected layer')
-parser.add_argument('--learning_rate', default=0.001, metavar=' ', help='learning rate for fine-tuning models')
+parser.add_argument('--learning_rate', default=0.0001, metavar=' ', help='learning rate for fine-tuning models')
 parser.add_argument('--saved_model_path', required=True, metavar='path', help='the directory to save fine-tuned models')
 
 args = parser.parse_args()
