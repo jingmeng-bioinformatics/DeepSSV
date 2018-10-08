@@ -17,7 +17,7 @@ xphyle
 
 ## Getting started
 
-1. Run samtools (tested version: 1.8) to convert tumor and normal BAM files to a mixed pileup file required by Deepssv:
+1. Run samtools (tested version: 1.8) to convert tumor and normal BAM files to a mixed pileup file required by DeepSSV:
 
         samtools mpileup -B -d 100 -f /path/to/ref.fasta [-l] [-r] -q 10 -O -s -a /path/to/tumor.bam /path/to/normal.bam | bgzip > /path/to/mixed_pileup_file
 
@@ -75,7 +75,7 @@ xphyle
         chr1    2312314 1
         chr1    5006153 0   
              
-Please help us improve Deepssv by reporting bugs or ideas on how to make things better. You can submit an issue or send me an email.
+Please help us improve DeepSSV by reporting bugs or ideas on how to make things better. You can submit an issue or send me an email.
 
 Jing Meng        
 
