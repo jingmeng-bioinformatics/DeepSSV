@@ -153,7 +153,7 @@ def main(args):
             line_content = line[1].rstrip('\n').split('\t')
             line_pair_content = line_pair[1].rstrip('\n').split('\t')
             
-            if line_pair_content[2] >= t: 
+            if float(line_pair_content[2]) >= t: 
 
                 # write deletions
                 if re.search('\-[0-9]+', line_content[4]):
