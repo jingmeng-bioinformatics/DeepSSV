@@ -11,9 +11,9 @@ TensorFlow 1.8.0
 
 Please see https://www.tensorflow.org/install/install_linux for how to install TensorFlow.
 
-pandas
+pandas 0.23.3
 
-xphyle
+xphyle 3.1.6
 
 ## Getting started
 
