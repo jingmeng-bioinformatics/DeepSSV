@@ -79,4 +79,4 @@ Please help us improve DeepSSV by reporting bugs or ideas on how to make things 
 
 Jing Meng        
 
-jing.mengrabbit@gmail.com
+jing.mengrabbit@outlook.com
