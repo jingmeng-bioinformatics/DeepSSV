@@ -59,7 +59,7 @@ def small_variant_count(source, pattern = '[\+\-][0-9]+'):
 def process_line(line_content, line, Cs):
     pattern = ['A', 'a', 'T', 't', 'G', 'g', 'C', 'c', '\+[0-9]+', '\-[0-9]+']
     k = 10   # depth in tumor and normal
-    m = 0.075   # variant allele frequency in tumor 
+    m = 0.05   # variant allele frequency in tumor 
 
     # keep just the genomics sites that meet the criteria
     if line_content[2] not in 'Nn' and int(line_content[3]) >= k and int(line_content[8]) >= k and sum([len(re.findall(base, line_content[4])) for base in pattern]) > 0:
