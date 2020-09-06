@@ -21,7 +21,7 @@ xphyle 3.1.6
 
         samtools mpileup -B -d 100 -f /path/to/ref.fasta [-l] [-r] -q 10 -O -s -a /path/to/tumor.bam /path/to/normal.bam | bgzip > /path/to/mixed_pileup_file
 
-   Note: For the case of applying DeepSSV on a part of the whole genome, increase the BED entry by 110 base pairs in each direction, and specify the genomic region via the option -l or -r.
+Note: For the case of applying DeepSSV on a part of the whole genome, increase the BED entry by n (the number of flanking genomic sites to the left or right of the candidate somatic site) base pairs in each direction, and specify the genomic region via the option -l or -r.
 
 2. Run identi_candi_sites.py to identify candidate somatic small variants from the mixed pileup file:
 
